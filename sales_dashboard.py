@@ -29,7 +29,7 @@ daily_rev = df1.pivot_table(index='date',values='total_price',aggfunc='sum').res
 #daily_rev = df.groupby('date')['total_price'].sum().reset_index()
 st.subheader(('Daily Revenue between: ') + startdate +(' and ') + enddate) 
 
-st.bar_chart(daily_rev,x='date',y='total_price')
+#st.bar_chart(daily_rev,x='date',y='total_price')
 
 daily_rev2 = df1.pivot_table(index='date',values='total_price',columns='Country',aggfunc='sum').reset_index()
 
