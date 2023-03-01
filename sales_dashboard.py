@@ -9,7 +9,7 @@ import numpy as np
 st.title('Sales Dashbord')
 
 
-df = pd.read_csv('/Users/ss/Desktop/sales_dashboard/data/online_retail.csv')
+df = pd.read_csv('data/online_retail.csv')
 df['date'] = df['InvoiceDate'].apply(lambda x: x.split(" ", 1)[0])
 df['date'] =  pd.to_datetime(df['date'], infer_datetime_format=True)
 df['date'] = df['date'].dt.strftime('%Y-%m-%d')
